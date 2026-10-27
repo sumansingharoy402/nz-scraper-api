@@ -35,7 +35,7 @@ async def run_scraper(
             results.append(data)
             
         # Bubble.io-র জন্য JSON রেসপন্স
-        return {"body": results}
+        return results
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
